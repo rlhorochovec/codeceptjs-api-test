@@ -1,6 +1,6 @@
-Feature('user');
+Feature('Usuer');
 
-Scenario('test something',  async ({ I }) => {
+Scenario('Create user',  async ({ I }) => {
     const response = await I.sendPostRequest('/users', {
         name: 'hulk',
         job: 'hero'
