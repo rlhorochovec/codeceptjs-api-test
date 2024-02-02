@@ -20,7 +20,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: |
           npm install
-          npx playwright install
           npx codeceptjs run --plugins allure
     
     - name: Get Allure history
