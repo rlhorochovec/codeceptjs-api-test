@@ -37,3 +37,9 @@ Apagar o Allure Report de execuções anteriores
 
 Visualizar o Allure Report publicado
 [Visualizar](https://rlhorochovec.github.io/codeceptjs-api-test/)
+
+## Demonstração
+[Assistir vídeo da execução](https://youtu.be/HvIuyut5ito)
+
+## Screenshots
+<img src="https://github.com/rlhorochovec/codeceptjs-api-test/blob/develop/Screenshots/allure_overview.png" width="400" /> <img src="https://github.com/rlhorochovec/codeceptjs-api-test/blob/develop/Screenshots/allure_suites.png" width="400" />
