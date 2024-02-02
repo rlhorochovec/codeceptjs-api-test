@@ -1,14 +1,4 @@
-const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
-// turn on headless mode when running with HEADLESS=true environment variable
-// export HEADLESS=true && npx codeceptjs run
-setHeadlessWhen(process.env.HEADLESS);
-
-// enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
-setCommonPlugins();
-
-/** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './*_test.js',
   output: './output',
   helpers: {
     REST: {
@@ -19,17 +9,26 @@ exports.config = {
   include: {
     I: './steps_file.js'
   },
+  mocha: {},
+  bootstrap: null,
+  timeout: null,
+  teardown: null,
+  hooks: [],
+  gherkin: {
+    features: './features/*.feature',
+    steps: ['./step_definitions/user_steps.js']
+  },
   plugins: {
     screenshotOnFail: {
       enabled: true
     },
     allure: {
       enabled: true,
-      outputDir: "./allure-results",
-      require: "allure-codeceptjs"
+      outputDir: './allure-results',
+      require: 'allure-codeceptjs'
     },
     stepByStepReport: {
-      enabled: true,
+      enabled: true
     },
     tryTo: {
       enabled: true
@@ -45,6 +44,16 @@ exports.config = {
     },
     pauseOnFail: {}
   },
+  stepTimeout: 0,
+  stepTimeoutOverride: [{
+      pattern: 'wait.*',
+      timeout: 0
+    },
+    {
+      pattern: 'amOnPage',
+      timeout: 0
+    }
+  ],
   name: 'codeceptjs-api-test',
   translation: 'pt-BR'
 }

@@ -1,9 +1,5 @@
-Feature('Usuer');
+Funcionalidade('user');
 
-Scenario('Create user',  async ({ I }) => {
-    const response = await I.sendPostRequest('/users', {
-        name: 'hulk',
-        job: 'hero'
-      });
-    I.seeResponseCodeIsSuccessful();
+Cenário('test something',  ({ I }) => {
+
 });
