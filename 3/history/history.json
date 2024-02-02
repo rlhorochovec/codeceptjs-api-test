@@ -1,0 +1,1 @@
+{"3925564d7f5501f89f068722061aaa39":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"678a252ac93b01c3","reportUrl":"https://rlhorochovec.github.io/codeceptjs-api-test/3//#testresult/678a252ac93b01c3","status":"passed","time":{"start":1706902830944,"stop":1706902831310,"duration":366}}]}}
