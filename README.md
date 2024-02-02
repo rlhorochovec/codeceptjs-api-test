@@ -1,5 +1,4 @@
 # codeceptjs-api-test
-# codeceptjs-api-test
 [![codeceptjs-api-test](https://github.com/rlhorochovec/codeceptjs-api-test/actions/workflows/ci.yml/badge.svg)](https://github.com/rlhorochovec/codeceptjs-api-test/actions/workflows/ci.yml)
 
 Projeto de automação de testes web utilizando CodeceptJS, Cucumber e Allure Report, executando via GitHub Actions e publicando o relatório da execução no GitHub Pages.
