@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Feb 10 14:03:25 GMT 2024","Sat Feb 10 14:03:26 GMT 2024","790","","API de Usuários","","","","Remover um usuário existente @DEL",""
+"passed","Sat Feb 10 14:03:25 GMT 2024","Sat Feb 10 14:03:26 GMT 2024","552","","API de Usuários","","","","Atualizar informações de um usuário @PUT",""
+"passed","Sat Feb 10 14:03:25 GMT 2024","Sat Feb 10 14:03:25 GMT 2024","319","","API de Usuários","","","","Criar um novo usuário @POST",""
+"passed","Sat Feb 10 14:03:25 GMT 2024","Sat Feb 10 14:03:26 GMT 2024","584","","API de Usuários","","","","Obter detalhes de um usuário existente @GET",""
