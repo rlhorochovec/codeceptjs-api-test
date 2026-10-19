@@ -1,46 +1,59 @@
-name: codeceptjs-api-test
+name: Testes de API com CodeceptJS
 
 on:
   push:
-    branches-ignore:
-      - '!main'
+    branches:
+      - develop
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
+    name: Execução do CodeceptJS (API)
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: |
+      # Verifica (faz checkout) o seu repositório no $GITHUB_WORKSPACE para o job poder acessá-lo
+      - name: Verificar repositório
+        uses: actions/checkout@v3
+
+      # Configura a versão do Node.js no ambiente executor (runner)
+      - name: Usar Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # Instala as dependências e executa os testes de API do CodeceptJS gerando os resultados para o Allure
+      - name: Instalar dependências e executar testes de API
+        run: |
           npm install
           npx codeceptjs run --plugins allure
     
-    - name: Get Allure history
-      uses: actions/checkout@v2
-      if: always()
-      continue-on-error: true
-      with:
+      # Obtém o histórico do Allure da branch gh-pages para manter o histórico de relatórios
+      - name: Obter histórico do Allure
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
           ref: gh-pages
           path: gh-pages
 
-    - name: Allure Report action from marketplace
-      uses: simple-elf/allure-report-action@master
-      if: always()
-      with:
+      # Gera o relatório Allure utilizando a action do marketplace
+      - name: Gerar relatório Allure
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
           allure_results: allure-results
           allure_history: allure-history
 
-    - name: Deploy report to Github Pages
-      if: always()
-      uses: peaceiris/actions-gh-pages@v2
-      env:
+      # Publica o relatório Allure gerado no GitHub Pages
+      - name: Publicar relatório no GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history

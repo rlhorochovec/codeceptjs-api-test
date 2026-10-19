@@ -42,4 +42,4 @@ Visualizar o Allure Report publicado
 [Assistir vídeo da execução](https://youtu.be/HvIuyut5ito)
 
 ## Screenshots
-<img src="https://github.com/rlhorochovec/codeceptjs-api-test/blob/develop/Screenshots/allure_overview.png" width="400" /> <img src="https://github.com/rlhorochovec/codeceptjs-api-test/blob/develop/Screenshots/allure_suites.png" width="400" />
+<img src="https://github.com/rlhorochovec/codeceptjs-api-test/blob/develop/screenshots/allure_overview.png" width="400" /> <img src="https://github.com/rlhorochovec/codeceptjs-api-test/blob/develop/screenshots/allure_suites.png" width="400" />
