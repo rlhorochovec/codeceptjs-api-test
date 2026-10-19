@@ -1,5 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","890","Obter detalhes de um usuário existente @GET","","2026-10-19","passed","2026-10-19","","API de Usuários","",""
-"","623","Atualizar informações de um usuário @PUT","","2026-10-19","passed","2026-10-19","","API de Usuários","",""
-"","1051","Remover um usuário existente @DEL","","2026-10-19","passed","2026-10-19","","API de Usuários","",""
-"","333","Criar um novo usuário @POST","","2026-10-19","passed","2026-10-19","","API de Usuários","",""
